@@ -13,10 +13,11 @@
 
         birdFlies2(key) {
             if(key) {
-                document.querySelector('[data-index="5"] .bird').style.transform = `translate(${window.innerWidth}px), translate(${-window.innerHeight * 0.7}px)`;
+                document.querySelector('[data-index="5"] .bird').style.transform = `translate(${window.innerWidth}px, ${-window.innerHeight * 0.7}px)`;
             } else {
                 document.querySelector('[data-index="5"] .bird').style.transform = `translate(-100%)`;
-            }        }
+            }        
+        }
     }
 
     const stepElems = document.querySelectorAll(".step");
