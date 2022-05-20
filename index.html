@@ -1,105 +1,279 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>1분코딩 예제 - 코로나19 시대, 제주 사는 개발자의 하루</title>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<header class="header">
-		<div class="global-width">
-			<h1 class="page-title">코로나19 시대, 제주 사는 개발자의 하루</h1>
-			<p>
-				이 페이지는 BBC 비주얼저널리즘 팀에서 제작한 <a href="https://www.bbc.com/korean/resources/idt-48d3c9a7-4063-4289-9726-611b5ea9d7b5" target="_blank">'재택근무의 일상화'... 코로나19가 바꿀 사무실의 미래</a> 페이지를 비슷하게 구현해 본 개발 예제입니다. 시각적 기능만 비슷하게 만들어 본 것이므로, 개발 방식은 전혀 다를 수도 있습니다.<br>아래의 내용은 제주 바닷가에 사는 개발자인 저의 실제 일상이기도 하지만, 강의영상 예제로 만든 페이지이므로 내용에 큰 의미를 두고 보실 필요는 없습니다 ㅎㅎ<br>밑으로 스크롤 해봅시다.
-			</p>
-		</div>
-	</header>
-	<section class="scroll-content">
-		<div class="scroll-graphic">
-			<div class="graphic-item"><img class="scene-img" src="images/00.png" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="images/01.png" alt=""></div>
-			<div class="graphic-item" data-action="birdFlies">
-				<img class="bird" src="images/bird.gif" alt="">
-				<img class="scene-img" src="images/02.png" alt="">
-			</div>
-			<div class="graphic-item"><img class="scene-img" src="images/bird.gif" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="images/03.png" alt=""></div>
-			<div class="graphic-item" data-action="birdFlies2">
-				<img class="bird" src="images/bird.gif" alt="">
-				<img class="scene-img" src="images/04.png" alt="">
-			</div>
-			<div class="graphic-item"><img class="scene-img" src="images/05.png" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="images/06.png" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="images/07.png" alt=""></div>
-			<div class="graphic-item"><img class="scene-img" src="images/08.png" alt=""></div>
-		</div>
-		<div class="scroll-text global-width">
-			<div class="step">
-				<p>
-					일분이를 소개한다.<br><br><a href="https://studiomeal.com" target="_blank">1분코딩</a>의 마스코트이며 제주 바닷가에 사는 개발자인 일분이는 코로나19 이전부터 재택근무를 해왔지만, 코로나19는 일분이의 생활에도 변화를 주었다.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					아침에 일어나면, 커피를 내리며 정신을 차린다.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					사회적 거리두기를 위해 한적한 바닷길쪽으로 러닝을 한다.<br>가끔 만나는 바닷새와 눈인사를 나눈다.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					맞다, 트위터의 걔.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					운동을 마치고 집에 돌아와 작업을 시작한다.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					밥은 집에서 먹거나, 테이크아웃이 가능한 메뉴를 골라 탁 트인 야외에서 먹는다. 물론 사회적 거리두기를 하기 위함이다.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					보통 오후 작업은 집 근처의 일하기 좋은 카페에서 해왔지만, 코로나19 이후에는 집에서 하는 날이 많아졌다.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					라면 매니아 답게 유튜브로 <a href="https://www.youtube.com/channel/UCYzTR8jV9_xv1p25N2dNBQQ" target="_blank">라면소녀</a> 채널을 보며 간식으로 라면을 먹는다.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					자기 전, 가끔 <a href="https://www.youtube.com/channel/UCkTRKCuFrRiXQm_gMG1uDvg" target="_blank">요가소년</a> 채널을 보며 요가를 한다.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					일과를 마치고 <span class="strikethrough">폰질을 한다</span> 잠자리에 든다.
-				</p>
-			</div>
-		</div>
-	</section>
-	<section class="normal-content global-width">
-		<h2>도시를 떠나는 사람들</h2>
-		<p>원격근무 하시는 개발자 디자이너분들, 제주로 오세요. 진짜 좋아요. Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ullam culpa ab, laborum repellat ut quae deleniti nostrum sapiente illum!</p>
-		<h2>언택트 시대가 온다</h2>
-		<p>언택트(Untact)'란 '콘택트(contact: 접촉하다)'에서 부정의 의미인 '언(un-)을 합성한 말로, 기술의 발전을 통해 비대면으로 이루어지는 활동 경향을 의미한다. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam provident voluptatum numquam dolorum, quod odio.</p>
-		<h2>내일은 어떤 모습일까</h2>
-		<p>똑같겠지 다를게 있나 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui impedit numquam atque quidem quos facere obcaecati deleniti labore culpa esse nostrum dicta earum rem ducimus, voluptates eligendi voluptate exercitationem dolorem!</p>
-	</section>
-	<footer class="global-footer">
-		<a href="https://www.youtube.com/channel/UC_s1FC7s5YVwDImzv-WG93Q" target="blank">1분코딩</a>
-	</footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기다릴게 기다려줘</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Song+Myung&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-	<script src="main.js"></script>
-</body>
+  <body>
+    <header class="header">
+      <!-- <div class="global-width">
+        <h1 class="page-title">기다릴게 기다려줘</h1>
+        <p>START</p>
+      </div> -->
+    </header>
+    <section class="scroll-content">
+      <div class="music">
+        <audio autoplay loop>
+          <source src="images/Beautiful-Piano.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+      <div class="music_control">
+        <i class="fas fa-volume-mute"></i>
+      </div>
+
+      <div class="scroll-graphic">
+        <div class="graphic-item" data-action="twinkle">
+          <img
+            src="images/star_dot.png"
+            alt="별"
+            class="star_dot star twinkle"
+          />
+          <img class="scene-img" src="images/bg1.png" alt="" />
+        </div>
+        <div class="graphic-item" data-action="swing">
+          <img src="images/star_lonely.png" alt="별" class="star_lonely star" />
+          <img class="scene-img" src="images/bg2.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg3.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg4.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg5.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg6.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg7.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg8.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg9.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg10.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg10-2.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg11.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg12.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg12-2.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg13.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg13-2.png" alt="" />
+        </div>
+        <div class="graphic-item" data-action="falling">
+          <img src="images/comet1.png" alt="" class="comet star" />
+          <img class="scene-img" src="images/bg14.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg15.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg16.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg17.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg18.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg19.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg20.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg21.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg22.png" alt="" />
+        </div>
+        <div class="graphic-item" data-action="twinkle2">
+          <img src="images/star_big.png" alt="" class="star_big star" />
+          <img class="scene-img" src="images/bg23.png" alt="" />
+        </div>
+        <div class="graphic-item">
+          <img class="scene-img" src="images/bg_end.png" alt="" />
+        </div>
+      </div>
+      <div class="scroll-text global-width">
+        <div class="step">
+          <p>
+            옛날옛날 먼 우주에<br />
+            작은 별이 살고 있었어요.
+          </p>
+        </div>
+        <div class="step">
+          <p>작은 별은 외로웠어요.</p>
+        </div>
+        <div class="step">
+          <p>
+            그 별 주위엔 다른 별이<br />
+            하나도 없었거든요.
+          </p>
+        </div>
+        <div class="step">
+          <p>어느 날 저 멀리 어디에선가</p>
+        </div>
+        <div class="step">
+          <p>
+            불처럼 빛나는 꼬리를 지닌<br />
+            혜성이 나타났어요.
+          </p>
+        </div>
+        <div class="step">
+          <p>“혜성아 안녕? 내 친구가 되어줄래?”</p>
+        </div>
+        <div class="step">
+          <p>작은별은 반가운 마음에 물었어요.</p>
+        </div>
+        <div class="step">
+          <p>
+            하지만 혜성은 대답도 없이<br />
+            쏜살같이 날아가버렸어요.
+          </p>
+        </div>
+        <div class="step">
+          <p>
+            작은 별은 너무 섭섭한 나머지<br />
+            엉엉 울고 말았어요.
+          </p>
+        </div>
+        <div class="step">
+          <p>그 뒤로 작은별은 다시 긴 시간을</p>
+        </div>
+        <div class="step">
+          <p>홀로 지내야 했어요.</p>
+        </div>
+        <div class="step">
+          <p>그렇게 76년이 지난 뒤</p>
+        </div>
+        <div class="step">
+          <p>
+            멀리서 그 혜성이 또 나타났어요.<br />
+            작은별은 깜짝 놀랐어요.
+          </p>
+        </div>
+        <div class="step">
+          <p>
+            그런데 잘 들어보니 혜성이 날아오며 <br />
+            뭐라고 막 소리치는게 아니겠어요?
+          </p>
+        </div>
+        <div class="step">
+          <p>
+            “지난 번엔 미안했어. <br />
+            너무 빨리 지나가느라<br />
+            그래 우리 친구가 되자”
+          </p>
+        </div>
+        <div class="step">
+          <p>
+            혜성이 엄청난 속도로 멀어지며 덧붙였어요. <br />
+            “다음 번에, 76년 뒤에, 또 만나!”
+          </p>
+        </div>
+        <div class="step">
+          <p>그러고는 다시금 사라져버렸어요.</p>
+        </div>
+        <div class="step">
+          <p>작은 별은 혼자 남겨졌지만</p>
+        </div>
+        <div class="step">
+          <p>이제 외롭지 않았어요.</p>
+        </div>
+        <div class="step">
+          <p>아주 가끔씩이기는 하지만</p>
+        </div>
+        <div class="step">
+          <p>
+            만날 수 있는 친구가<br />
+            생겼으니까요.
+          </p>
+        </div>
+        <div class="step">
+          <p>
+            작은별과 혜성은 서로를<br />
+            다시 만날 생각에
+          </p>
+        </div>
+        <div class="step">
+          <p>
+            언제나 두근두근 설레며<br />
+            넓은 우주에서
+          </p>
+        </div>
+        <div class="step">
+          <p>눈부시게 빛날 수 있었답니다.</p>
+        </div>
+        <div class="step">
+          <p></p>
+        </div>
+        <div class="step">
+          <p></p>
+        </div>
+        <div class="step step2">
+          <img src="images/book.png" alt="" class="book" />
+          <p>
+            기다릴게<br />
+            기다려 줘
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="normal-content global-width">
+      <h2>잊히지 않는 만남을 추억하는 이들에게</h2>
+      <br />
+      <p>
+        <b>출판사 리뷰</b> <br />먼 우주, 소리도 빛도 없을 것 같은 이곳에서 작은
+        별의 이야기가 시작됩니다. 주위는 고요하고 변화 없는 일상의 연속이었지만,
+        작은 별의 마음은 밀물과 썰물의 끝없는 운동처럼 먹먹한 애달픔과 희미한
+        희망으로 울렁였을 테지요. 매끈할 것 같은 별의 표면이 한 올 한 올
+        외로움으로 살아나 일렁이던 그 어느 날, 작은 별에게 예기치 않은 일이
+        생깁니다. 순식간에 암흑을 제치고 나타난 혜성, 그 불처럼 빛나는 꼬리를
+        마주한 작은 별의 마음은 어땠을까요. <기다릴게 기다려 줘>는 스치듯 흘려
+        버린 일상 속 만남의 순간을 하나하나 되짚어 보게 합니다. 만남 전의
+        기대감, 처음 만남의 설렘, 때로는 아픔과 좌절의 파편을 남긴 만남들을
+        주워담고 꺼내어 올올이 추억하게 합니다.
+      </p>
+      <p>글 : 이적(이동준) &nbsp &nbsp 그림 : 이진희</p>
+    </section>
+    <footer class="global-footer">
+      웅진 모두의 그림책 | 기다릴게 기다려 줘 / 이적 글, 이진희 그림 /
+      웅진주니어 (2018-11-13)
+      <br />
+      Beautiful Piano by LesFM | https://lesfm.net/piano-background-music/ Music
+      promoted by https://www.chosic.com/free-music/all/ Creative Commons CC BY
+      3.0 https://creativecommons.org/licenses/by/3.0/
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
 </html>
