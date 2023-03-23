@@ -1,7 +1,7 @@
 (() => {
   let on_off = document.querySelector(".music_control i");
   let audio = document.querySelector(".music audio");
-  audio.volume = 0.7;
+  audio.volume = 0.5;
 
   on_off.addEventListener("click", () => {
     audio.paused ? audio.play() : audio.pause();
@@ -108,7 +108,12 @@
   activate();
 })();
 
-
+function loading() {
+  document.body.style.overflow = "hidden";
+}
+function endLoading() {
+  document.body.style.overflow = "auto";
+}
 
 $(document).ready(function () {
   var counter = 0;
@@ -117,21 +122,19 @@ $(document).ready(function () {
     $(".loading-page .counter h1").html(c + "%");
     $(".loading-page .counter hr").css("width", c + "%");
 
-    
-    // $(".loading-page .counter h1.color").css("width", c + "%");
-    
     counter++;
     c++;
+    loading();
 
     if (counter == 101) {
       clearInterval(i);
+      endLoading();
     }
   }, 50);
 });
 
-
-$(window).on('load', function() {
-    setTimeout(function(){
-        $(".loading-page").fadeOut();
-    }, 5500);
+$(window).on("load", function () {
+  setTimeout(function () {
+    $(".loading-page").fadeOut();
+  }, 5500);
 });
