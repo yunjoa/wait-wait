@@ -182,10 +182,8 @@ body {
 
 .scene-img {
   max-height: 100vh;
-  object-fit: cover;
-}
 
-.book {
+  object-fit: cover;
 }
 
 .star {
