@@ -1,12 +1,43 @@
 (() => {
+  // BGM
   let on_off = document.querySelector(".music_control i");
   let audio = document.querySelector(".music audio");
   audio.volume = 0.5;
+  audio.autoplay = false;
 
   on_off.addEventListener("click", () => {
     audio.paused ? audio.play() : audio.pause();
     on_off.classList.toggle("fa-volume-up");
   });
+
+  // lazy loading
+  const imagesToLoad = document.querySelectorAll(".scene-img");
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const image = entry.target;
+        const imageUrl = image.dataset.src;
+
+        image.src = imageUrl;
+        image.removeAttribute("data-src");
+
+        observer.unobserve(image);
+      }
+    });
+  }, options);
+
+  imagesToLoad.forEach((image) => {
+    observer.observe(image);
+  });
+
+  // 스크롤 페어링
 
   const actions = {
     twinkle(key) {
@@ -108,6 +139,7 @@
   activate();
 })();
 
+// 시작 로딩페이지
 function loading() {
   document.body.style.overflow = "hidden";
 }
