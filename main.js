@@ -1,13 +1,12 @@
 (() => {
-  // BGM
-  let on_off = document.querySelector(".music_control i");
-  let audio = document.querySelector(".music audio");
+  const audio = document.querySelector(".music audio");
+  const musicControl = document.querySelector(".music_control i");
   audio.volume = 0.5;
   audio.autoplay = false;
 
-  on_off.addEventListener("click", () => {
+  musicControl.addEventListener("click", () => {
     audio.paused ? audio.play() : audio.pause();
-    on_off.classList.toggle("fa-volume-up");
+    musicControl.classList.toggle("fa-volume-up");
   });
 
   // lazy loading
@@ -110,16 +109,12 @@
   window.addEventListener("scroll", () => {
     let step;
     let boundingRect;
-    let temp = 0;
 
-    // for (let i = 0; i < stepElems.length; i++){
     for (let i = ioIndex - 1; i < ioIndex + 2; i++) {
       step = stepElems[i];
-
       if (!step) continue;
+
       boundingRect = step.getBoundingClientRect();
-      // console.log(boundingRect.top);
-      temp++;
 
       if (
         boundingRect.top > window.innerHeight * 0.1 &&
@@ -130,12 +125,12 @@
         activate(currrentItem.dataset.action);
       }
     }
-    // console.log(temp)
   });
 
   window.addEventListener("load", () => {
     setTimeout(() => scrollTo(0, 0), 100);
   });
+
   activate();
 })();
 
