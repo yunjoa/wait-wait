@@ -1,12 +1,13 @@
 (() => {
-  const audio = document.querySelector(".music audio");
-  const musicControl = document.querySelector(".music_control i");
+  // BGM
+  let on_off = document.querySelector(".music_control i");
+  let audio = document.querySelector(".music audio");
   audio.volume = 0.5;
   audio.autoplay = false;
 
-  musicControl.addEventListener("click", () => {
+  on_off.addEventListener("click", () => {
     audio.paused ? audio.play() : audio.pause();
-    musicControl.classList.toggle("fa-volume-up");
+    on_off.classList.toggle("fa-volume-up");
   });
 
   // lazy loading
@@ -24,6 +25,7 @@
         const image = entry.target;
         const imageUrl = image.dataset.src;
 
+        console.log("lazyloading");
         image.src = imageUrl;
         image.removeAttribute("data-src");
 
@@ -109,12 +111,16 @@
   window.addEventListener("scroll", () => {
     let step;
     let boundingRect;
+    let temp = 0;
 
+    // for (let i = 0; i < stepElems.length; i++){
     for (let i = ioIndex - 1; i < ioIndex + 2; i++) {
       step = stepElems[i];
-      if (!step) continue;
 
+      if (!step) continue;
       boundingRect = step.getBoundingClientRect();
+      // console.log(boundingRect.top);
+      temp++;
 
       if (
         boundingRect.top > window.innerHeight * 0.1 &&
@@ -125,12 +131,12 @@
         activate(currrentItem.dataset.action);
       }
     }
+    // console.log(temp)
   });
 
   window.addEventListener("load", () => {
     setTimeout(() => scrollTo(0, 0), 100);
   });
-
   activate();
 })();
 
